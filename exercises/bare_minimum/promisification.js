@@ -27,7 +27,7 @@ var getGitHubProfile = function(user, callback) {
   });
 };
 
-var getGitHubProfileAsync = function(user, callback) {
+var getGitHubProfileAsync = function(user) {
   var promise = new Promise((resolve, reject) => {
     var options = {
       url: 'https://api.github.com/users/' + user,
@@ -78,7 +78,7 @@ var readFileAndMakeItFunny = function(filePath, callback) {
   });
 };
 
-var readFileAndMakeItFunnyAsync = function(filePath, callback) {
+var readFileAndMakeItFunnyAsync = function(filePath) {
   var promise = new Promise((resolve, reject) => {
     fs.readFile(filePath, 'utf8', function(err, file) {
       if (err) { 
@@ -96,7 +96,6 @@ var readFileAndMakeItFunnyAsync = function(filePath, callback) {
   });
 
   return promise;
-
 }; 
 
 // Export these functions so we can test them and reuse them in later exercises
