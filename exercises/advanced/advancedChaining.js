@@ -38,6 +38,7 @@ var searchCommonConceptsFromGitHubProfiles = function (githubHandles) {
       return Promise.all(concepts);
     })
     .then(function(concepts) {
+      console.log('concepts', concepts);
       return lib.getIntersection(concepts.slice());
     });
 
