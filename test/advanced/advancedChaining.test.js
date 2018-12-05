@@ -6,7 +6,7 @@ var Promise = require('bluebird');
 // refactor the tests to use mocks, following previous
 // `nock` utilizing tests
 
-xdescribe('Advanced chaining', function() {
+describe('Advanced chaining', function() {
   var chaining = require('../../exercises/advanced/advancedChaining.js');
 
   describe('searchCommonConceptsFromGitHubProfiles', function() {
